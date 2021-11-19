@@ -67,7 +67,12 @@ function getRandomFact(){
 // g_current_pet. Finally it will use jQuery to display the pet’s image,
 // name, extras, and the random fact/joke.
 function displayPet() {
+    let fact = getRandomFact();
+    g_currentPet = getRandomPet();
+    let name = getRandomName();
+    // set name to name field of g_currentPet pet object
 
+    // DISPLAY ON WEBPAGE
 }
 
 // This function will be called every time the user clicks
@@ -81,7 +86,7 @@ function adoptPet() {
 
     // LOOP THROUGH LIST AND DISPLAY ON WEBPAGE
 
-    // ------THIS FUNCTION NOT DONE ----------------
+    // ---------- THIS FUNCTION NOT DONE ----------------
 
 }
 
