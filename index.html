@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title> X</title>
-	<link rel="stylesheet" type="text/css" href="css/pet.css">
+  <link rel="stylesheet" type="text/css" href="css/pet.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/pet.js" defer></script>
-
 </head>
-
 <body>
-	<main >
-		<h1>Welcome to our Pet Project</h1>
-				<button class="button newPetNameButton" onclick="getRandomName()">Get A Random Pet Name</button>
+  <div class="grid-container">
 
-				<div id="petName">
-						getRandomName();
-				</div>
+    <div class="top">
+      <div id="settings">
+        <button id="settings-button"><img id="settings-img" src="img/circleplaceholder.png"></button>
+      </div>
+    </div>
 
-		<h2 style="color: #randomcolorid">Hello World</h2>
-	</main>
+    <div class="sticky-note">
+      <div>
+        <img id="sticknote-image" src="img/imgplaceholder.png">
+      </div>
+    </div>
+
+    <div class="pet-info">
+        <div id="pet-img">
+          <img id="pet-image" src="img/imgplaceholder.png">
+        </div>
+
+        <div class="name-next">
+          <div id="petName">
+          getRandomName();
+          </div>
+          <div id ="next">
+            <button class="button newPetNameButton" onclick="getRandomName()">Name</button>
+          </div>
+        </div>
+
+        <div id="adopt">
+          <button id="adopt-button">Adopt</button>
+        </div>
+    </div>
+
+    <div class="pet-profiles">
+      <div class="profiles-img">
+        <div >
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+        <div>
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+        <div>
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+        <div>
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+        <div>
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+        <div>
+          <img id="profile-img" src="img/circleplaceholder.png">
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
-
-
 </html>
