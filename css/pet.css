@@ -90,9 +90,9 @@ body {
   margin-right:130px;
   margin-left:130px;
   margin-bottom:20px;
-  padding:10px;
+  /*padding:10px;
   border-radius:20px;
-  background-color:#f2d37c;
+  background-color:#f2d37c;*/
   text-align:center;
 }
 
@@ -103,5 +103,35 @@ body {
   width:80px;
 }
 #adopt-button{
+  padding: 8px 50px;
+  border-radius:20px;
+  border:none;
+  transition:0.4s;
+  background-color:#eee;
 }
-#settings-button {}
+#adopt-button:hover{
+  background-color:#b8b8b8;
+  color:black;
+}
+.newPetNameButton{
+  padding:5px 15px;
+  border-radius:20px;
+  border:none;
+  transition:0.4s;
+  background-color:#eee;
+}
+.newPetNameButton:hover{
+  background-color:#b8b8b8;
+  color:black;
+}
+#settings-button {
+  padding:9px 13px;
+  border-radius:50%;
+  border:none;
+  transition:0.4s;
+  background-color:#eee;
+}
+#settings-button:hover{
+  background-color:#b8b8b8;
+  color:black;
+}
