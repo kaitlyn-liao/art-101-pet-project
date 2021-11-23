@@ -73,11 +73,11 @@ body {
   height:250px;
   color: green;
 }
-#petName{
+#petNameDiv{
   display:block;
   margin-left:90px;
-  margin-top:15px;
-  padding:10px;
+  margin-top:20px;
+  padding:0px 30px;
   background-color:#f2d37c;
   text-align: center;
 }
@@ -86,7 +86,6 @@ body {
   margin-left:30px;
   margin-top:15px;
   padding:10px;
-
 }
 #adopt{
   margin-top:20px;
