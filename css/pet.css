@@ -115,10 +115,10 @@ body {
   border-radius:20px;
   border:none;
   transition:0.4s;
-  background-color:#eee;
+  background-color:#f2d37c;
 }
 #adopt-button:hover{
-  background-color:#b8b8b8;
+  background-color:#bfa763;
   color:black;
 }
 .newPetNameButton{
@@ -126,10 +126,10 @@ body {
   border-radius:20px;
   border:none;
   transition:0.4s;
-  background-color:#eee;
+  background-color:#f2d37c;
 }
 .newPetNameButton:hover{
-  background-color:#b8b8b8;
+  background-color:#bfa763;
   color:black;
 }
 #settings-button {
@@ -137,9 +137,9 @@ body {
   border-radius:50%;
   border:none;
   transition:0.4s;
-  background-color:#eee;
+  background-color:#f2d37c;
 }
 #settings-button:hover{
-  background-color:#b8b8b8;
+  background-color:#bfa763;
   color:black;
 }
