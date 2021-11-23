@@ -1,13 +1,26 @@
 let nameAdjectives = [
     "Little",
     "Big",
+    "Madame",
+    "Mister",
+    "Tiny",
+    "Sir",
+    "Princess",
     ""
 ];
 let nameNouns = [
     "Bean",
     "Rump",
+    "Potato",
+    "Avocado",
+    "Raspberry",
+    "Muffin",
+    "Bumble",
     "Macaroni"
 ];
+//fetch the image of the current pet
+var petImage = document.getElementsByClassName('profile-img');
+//add an event listener for the current pet being rolle
 
 // Stores a list of all the Pet Objects that we adopted
 let g_adoptedPets = [];
@@ -28,7 +41,6 @@ console.log(getRandomName());
 function getRandomName(){
     //where is the pets name going to show up on the index.html?
     //this is where we figure that out.
-    var name = document.getElementById("petName");
 
     //get a random adjective from our adjective list
     var randomAdj = nameAdjectives[Math.floor(Math.random()*nameAdjectives.length)];
@@ -38,6 +50,7 @@ function getRandomName(){
     //assign the pets brand-spanking-new name!
     var newPetName = randomAdj + " " + randomNoun;
     //return our pets cool name!
+    document.getElementById("petName").innerHTML = newPetName;
     return newPetName;
 }
 
@@ -96,5 +109,6 @@ function getRandomColor() {
   for (var i = 0; i < 6; i++) {
     color += colorLetters[Math.floor(Math.random() * 16)];
   }
+
   return color;
 }

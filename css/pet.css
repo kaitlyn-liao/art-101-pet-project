@@ -71,6 +71,7 @@ body {
   margin-right:auto;
   width:250px;
   height:250px;
+  color: green;
 }
 #petName{
   display:block;
