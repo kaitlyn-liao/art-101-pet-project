@@ -25,10 +25,12 @@ body {
   grid-row:4/4;
   background-color:#f2d37c;
   border-radius: 17px;
+  margin-top:20px;
 }
 .profiles-img {
   display:grid;
   grid-template-columns:repeat(8, 1fr);
+  margin-top:5px;
   margin-left:90px;
   margin-right:90px;
 }
@@ -60,15 +62,15 @@ body {
   margin-left:100px;
   margin-right:auto;
   width:300px;
-  height: 250px;
+  height: 300px;
 }
 #pet-image{
   display:block;
-  margin-top:40px;
+  margin-top:100px;
   margin-left:auto;
   margin-right:auto;
-  width:400px;
-  height:300px;
+  width:250px;
+  height:250px;
 }
 #petName{
   display:block;
@@ -101,6 +103,12 @@ body {
   margin-left:auto;
   margin-right:auto;
   width:80px;
+}
+#bunny, #cat {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:60px;
 }
 #adopt-button{
   padding: 8px 50px;
