@@ -116,6 +116,7 @@ body {
   border:none;
   transition:0.4s;
   background-color:#f2d37c;
+  font-family: 'Roboto', sans-serif;
 }
 #adopt-button:hover{
   background-color:#bfa763;
@@ -127,6 +128,7 @@ body {
   border:none;
   transition:0.4s;
   background-color:#f2d37c;
+  font-family: 'Roboto', sans-serif;;
 }
 .newPetNameButton:hover{
   background-color:#bfa763;
