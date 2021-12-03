@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Pet Project</title>
+  <title>Pet Project</title>
   <link rel="stylesheet" type="text/css" href="css/pet.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="js/pet.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/pet.js" defer></script>
 </head>
+
 <body>
   <div class="grid-container">
 
@@ -25,55 +27,55 @@
     </div>
 
     <div class="pet-info">
-        <div id="pet-img">
-          <img id="pet-image" src="img/pig.png">
-        </div>
+      <div id="pet-img">
+        <img id="pet-image" src="img/pig.png">
+      </div>
 
-        <div class="name-next">
-          <div id="petNameDiv">
-          	<p id="petName"></p>
-          </div>
-          <div id ="next">
-            <button class="newPetNameButton" onclick="getRandomPet()">Pets</button>
-          </div>
+      <div class="name-next">
+        <div id="petNameDiv">
+          <p id="petName"></p>
         </div>
+        <div id="next">
+          <button class="newPetNameButton" onclick="getRandomPet()">Pets</button>
+        </div>
+      </div>
 
-        <div id="adopt">
-          <button id="adopt-button">Adopt</button>
-        </div>
-    </div>
-
-    <div class="pet-profiles">
-      <div class="profiles-img">
-        <div >
-          <img id="profile-img" src="img/bear.png">
-        </div>
-        <div>
-          <img id="bunny" src="img/bunny.png">
-        </div>
-        <div>
-          <img id="profile-img" src="img/dog.png">
-        </div>
-        <div>
-          <img id="cat" src="img/cat.png">
-        </div>
-        <div>
-          <img id="profile-img" src="img/giraffe.png">
-        </div>
-        <div>
-          <img id="profile-img" src="img/monkey.png">
-				</div>
-				<div >
-	          <img id="profile-img" src="img/pig.png">
-	        </div>
-				<div >
-					  <img id="profile-img" src="img/tiger.png">
-					</div>
-
-        </div>
+      <div id="adopt">
+        <button id="adopt-button" onclick="adoptPet()">Adopt</button>
       </div>
     </div>
 
+    <div class="pet-profiles">
+      <div class="profiles-img" id="adopted-pets">
+          <!-- <div>
+            <img id="profile-img" src="img/bear.png">
+          </div> -->
+          <!-- <div>
+            <img id="bunny" src="img/bunny.png">
+          </div>
+          <div>
+            <img id="profile-img" src="img/dog.png">
+          </div>
+          <div>
+            <img id="cat" src="img/cat.png">
+          </div>
+          <div>
+            <img id="profile-img" src="img/giraffe.png">
+          </div>
+          <div>
+            <img id="profile-img" src="img/monkey.png">
+          </div>
+          <div>
+            <img id="profile-img" src="img/pig.png">
+          </div>
+          <div>
+            <img id="profile-img" src="img/tiger.png">
+          </div> -->
+        </div>
+    </div>
+  </div>
+
   </div>
 </body>
+
 </html>

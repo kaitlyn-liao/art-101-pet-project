@@ -4,56 +4,56 @@
        {
           "name":"",
           "color": "",
-          "type": "",
+          "type": "bear",
           "img": "./img/bear.png"
        },
 
        {
           "name":"",
           "color": "",
-          "type": "",
+          "type": "bunny",
           "img": "./img/bunny.png"
        },
 
        {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "cat",
          "img": "./img/cat.png"
       },
 
       {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "dog",
          "img": "./img/dog.png"
       },
 
       {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "giraffe",
          "img": "./img/giraffe.png"
       },
 
       {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "monkey",
          "img": "./img/monkey.png"
       },
      
       {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "pig",
          "img": "./img/pig.png"
       },
 
       {
          "name":"",
          "color": "",
-         "type": "",
+         "type": "tiger",
          "img": "./img/tiger.png"
       }
     ]

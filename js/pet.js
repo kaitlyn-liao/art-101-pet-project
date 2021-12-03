@@ -32,16 +32,17 @@ let g_currentPet = {};
 let g_colorPref = "";
 let g_breedPref = "";
 
+// API endpoint
+var apiEndpoint = "https://useless-facts.sameerkumar.website/api";
 
-// CONSOLE LOG FOR TESTING OUR FUNCTIONS
-// console.log(getRandomName());
+
+function main(){
+    getRandomPet();
+}
 
 //function to handle random naming conventions
 //adj + noun
 function getRandomName() {
-    //where is the pets name going to show up on the index.html?
-    //this is where we figure that out.
-
     //get a random adjective from our adjective list
     var randomAdj = nameAdjectives[Math.floor(Math.random() * nameAdjectives.length)];
     //get a random adjective from our adjective list
@@ -83,6 +84,7 @@ function getRandomPet() {
             console.log(data);
             // gets random pet object 
             var random_idx = Math.floor( Math.random() * 9 );
+            // console.log(random_idx);
             pet = data.pets[random_idx];
             // set name to name field of pet object
             pet.name = pet_name;
@@ -107,21 +109,37 @@ function displayPet() {
     document.getElementById("petName").innerHTML = g_currentPet.name;
     // displays img on webpage
     document.getElementById("pet-image").src = g_currentPet.img;
+
+    let adoptPetStr = ""
+    // LOOP THROUGH ADOPTED LIST AND DISPLAY ON WEBPAGE
+    if(g_adoptedPets.length != 0){
+        for(i=0; i < g_adoptedPets.length; i++) {
+            if(g_adoptedPets[i].type == 'bunny')
+                adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + "> </div>";
+            else if(g_adoptedPets[i].type == 'cat')
+                adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + "> </div>";
+            else
+                adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + "> </div>";
+                // <div>
+                //     <img id="profile-img" src="img/dog.png">
+                // </div>
+        }
+    }
+    document.getElementById("adopted-pets").innerHTML = adoptPetStr;
 }
 
 // This function will be called every time the user clicks
 // the Adopt Me button on the UI.
 function adoptPet() {
     // First it will check if the array is full (max length will be 6).
-    if (g_adoptedPets.length == 6) {
+    if (g_adoptedPets.length == 8) {
         // If it is ‘full’ we will remove the first pet in the array
+        let removed_pet = g_adoptedPets.pop();
+        console.log(removed_pet);
     }
-    g_adoptedPets.append(g_currentPet);
-
-    // LOOP THROUGH LIST AND DISPLAY ON WEBPAGE
-
-    // ---------- THIS FUNCTION NOT DONE ----------------
-
+    // add current pet to beginning of list
+    g_adoptedPets.unshift(g_currentPet);
+    getRandomPet();
 }
 
 function getRandomColor() {
@@ -130,6 +148,7 @@ function getRandomColor() {
     for (var i = 0; i < 6; i++) {
         color += colorLetters[Math.floor(Math.random() * 16)];
     }
-
     return color;
 }
+
+main();
