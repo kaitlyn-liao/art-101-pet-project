@@ -1,0 +1,60 @@
+{
+    "pets": [
+     
+       {
+          "name":"",
+          "color": "",
+          "type": "",
+          "img": "./img/bear.png"
+       },
+
+       {
+          "name":"",
+          "color": "",
+          "type": "",
+          "img": "./img/bunny.png"
+       },
+
+       {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/cat.png"
+      },
+
+      {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/dog.png"
+      },
+
+      {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/giraffe.png"
+      },
+
+      {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/monkey.png"
+      },
+     
+      {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/pig.png"
+      },
+
+      {
+         "name":"",
+         "color": "",
+         "type": "",
+         "img": "./img/tiger.png"
+      }
+    ]
+ }
