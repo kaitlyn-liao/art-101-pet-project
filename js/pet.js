@@ -25,8 +25,11 @@ var petImage = document.getElementsByClassName('profile-img');
 // Stores a list of all the Pet Objects that we adopted
 let g_adoptedPets = [];
 
-// Not sure how to do this yet but we will set it to a Pet object
+// Will hold the pet data of the current displayed pet
 let g_currentPet = {};
+
+// Will hold the current random fact
+let g_currentFact = "";
 
 // Global Variables for Settings
 let g_colorPref = "";
@@ -35,9 +38,39 @@ let g_breedPref = "";
 // API endpoint
 var apiEndpoint = "https://useless-facts.sameerkumar.website/api";
 
-
-function main(){
+function main() {
     getRandomPet();
+}
+
+// FUNCTION USING API
+// This function will make a GET call to access our API and
+// return a random fact
+function getRandomFact() {
+    console.log("Doing API Stuff");
+    $.ajax({
+        // The URL for the request
+        url: apiEndpoint,
+        // The data to send (will be converted to a query string)
+        data: {},
+        // Whether this is a POST or GET request
+        type: "GET",
+        // The type of data we expect back
+        dataType: "json",
+        // If the request succeeds
+        success: function (data) {
+            // turn data object into string just so we can display it
+            var textData = JSON.stringify(data);
+            // get the individual values from data object
+            g_currentFact = data.data;
+            console.log("Success:", textData);
+        }
+    })
+        // If the request fails
+        .fail(function (xhr, status, errorThrown) {
+            console.log("Failure.");
+            putTextOnPage(errorThrown + " Status:" + status);
+        })
+    console.log("Asynchronously doing the next thing.");
 }
 
 //function to handle random naming conventions
@@ -63,18 +96,11 @@ function setFilters(color_pref, breed_pref) {
     g_breedPref = breed_pref;
 }
 
-// FOR ARIANA
-// FUNCTION USING API
-// This function will make a GET call to access our API and
-// return a random fact or random joke.
-function getRandomFact() {
-
-}
-
 // this function will pull from our json file to get a random pet
 function getRandomPet() {
     var pet = {};
     var pet_name = getRandomName();
+    getRandomFact();
     fetch("./pets.json",)
         .then(response => {
             // console.log(response.json());
@@ -83,7 +109,7 @@ function getRandomPet() {
         .then(data => {
             console.log(data);
             // gets random pet object 
-            var random_idx = Math.floor( Math.random() * 9 );
+            var random_idx = Math.floor(Math.random() * 9);
             // console.log(random_idx);
             pet = data.pets[random_idx];
             // set name to name field of pet object
@@ -103,26 +129,23 @@ function getRandomPet() {
 // g_current_pet. Finally it will use jQuery to display the pet’s image,
 // name, extras, and the random fact/joke.
 function displayPet() {
-    let fact = getRandomFact();
-
     // displays name on webpage
     document.getElementById("petName").innerHTML = g_currentPet.name;
     // displays img on webpage
     document.getElementById("pet-image").src = g_currentPet.img;
-
+    // displays fact on webpage
+    document.getElementById("random-fact").innerHTML = g_currentFact;
+    // displays adopted pets on webpage
     let adoptPetStr = ""
     // LOOP THROUGH ADOPTED LIST AND DISPLAY ON WEBPAGE
-    if(g_adoptedPets.length != 0){
-        for(i=0; i < g_adoptedPets.length; i++) {
-            if(g_adoptedPets[i].type == 'bunny')
+    if (g_adoptedPets.length != 0) {
+        for (i = 0; i < g_adoptedPets.length; i++) {
+            if (g_adoptedPets[i].type == 'bunny')
                 adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + "> </div>";
-            else if(g_adoptedPets[i].type == 'cat')
+            else if (g_adoptedPets[i].type == 'cat')
                 adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + "> </div>";
             else
                 adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + "> </div>";
-                // <div>
-                //     <img id="profile-img" src="img/dog.png">
-                // </div>
         }
     }
     document.getElementById("adopted-pets").innerHTML = adoptPetStr;
