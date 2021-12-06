@@ -145,11 +145,11 @@ function displayPet() {
     if (g_adoptedPets.length != 0) {
         for (i = 0; i < g_adoptedPets.length; i++) {
             if (g_adoptedPets[i].type == 'bunny')
-                adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
+                adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + ">" + g_adoptedPets[i].name + "</div>";
             else if (g_adoptedPets[i].type == 'cat')
-                adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
+                adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" +">"  + g_adoptedPets[i].name + "</div>";
             else
-                adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
+                adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" +">"  + g_adoptedPets[i].name + "</div>";
         }
     }
     document.getElementById("adopted-pets").innerHTML = adoptPetStr;

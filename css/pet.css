@@ -12,7 +12,6 @@ body {
     background-color: whitesmoke;
 }*/
 
-
 .sticky-note-test {
   margin: 10%;
   background-image: url("../img/stickynote.png");
@@ -35,6 +34,7 @@ body {
   /* transform: translate( -20%, 1200%);   */
 }
 
+
 .grid-container {
   display: grid;
   grid-template-columns:repeat(3, 1fr);
@@ -56,6 +56,7 @@ body {
   margin-top:5px;
   margin-left:90px;
   margin-right:90px;
+  text-align: center;
 }
 .top {
   grid-column: 3;
