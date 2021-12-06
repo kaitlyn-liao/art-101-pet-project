@@ -6,6 +6,15 @@ let nameAdjectives = [
     "Tiny",
     "Sir",
     "Princess",
+    "Queen",
+    "King",
+    "Round",
+    "Square",
+    "Flat",
+    "Brittle",
+    "Solid",
+    "Golden",
+    "Silver",
     ""
 ];
 let nameNouns = [
@@ -16,7 +25,16 @@ let nameNouns = [
     "Raspberry",
     "Muffin",
     "Bumble",
-    "Macaroni"
+    "Macaroni",
+    "Apple",
+    "Pineapple",
+    "Cranberry",
+    "Cookie",
+    "Cake",
+    "Peach",
+    "Scooter",
+    "Guava",
+    "Teacup"
 ];
 //fetch the image of the current pet
 var petImage = document.getElementsByClassName('profile-img');
