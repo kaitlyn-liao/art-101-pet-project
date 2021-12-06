@@ -108,7 +108,7 @@ function getRandomPet() {
         })
         .then(data => {
             console.log(data);
-            // gets random pet object 
+            // gets random pet object
             var random_idx = Math.floor(Math.random() * 9);
             // console.log(random_idx);
             pet = data.pets[random_idx];
@@ -129,10 +129,14 @@ function getRandomPet() {
 // g_current_pet. Finally it will use jQuery to display the pet’s image,
 // name, extras, and the random fact/joke.
 function displayPet() {
+
     // displays name on webpage
     document.getElementById("petName").innerHTML = g_currentPet.name;
     // displays img on webpage
     document.getElementById("pet-image").src = g_currentPet.img;
+    //set the color
+    g_currentPet.color = getRandomColor();
+    document.getElementById("pet-image").style.backgroundColor = g_currentPet.color;
     // displays fact on webpage
     document.getElementById("random-fact").innerHTML = g_currentFact;
     // displays adopted pets on webpage
@@ -141,11 +145,11 @@ function displayPet() {
     if (g_adoptedPets.length != 0) {
         for (i = 0; i < g_adoptedPets.length; i++) {
             if (g_adoptedPets[i].type == 'bunny')
-                adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + "> </div>";
+                adoptPetStr += "<div><img id='bunny' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
             else if (g_adoptedPets[i].type == 'cat')
-                adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + "> </div>";
+                adoptPetStr += "<div><img id='cat' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
             else
-                adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + "> </div>";
+                adoptPetStr += "<div><img id='profile-img' src=" + g_adoptedPets[i].img + " style= 'background-color:" + g_adoptedPets[i].color + ";''" + "> </div>";
         }
     }
     document.getElementById("adopted-pets").innerHTML = adoptPetStr;
@@ -171,6 +175,7 @@ function getRandomColor() {
     for (var i = 0; i < 6; i++) {
         color += colorLetters[Math.floor(Math.random() * 16)];
     }
+
     return color;
 }
 
